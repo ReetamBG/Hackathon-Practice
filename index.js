@@ -8,7 +8,6 @@ const port = 3000
 
 let users = []
 
-app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extends : true}))
 const __dirname = dirname(fileURLToPath(import.meta.url)) 
 
@@ -17,17 +16,11 @@ app.get("/", (req, res) => {
 })
 
 app.get("/login", (req, res) => {
-    // res.sendFile(__dirname + "/public/pages/login.html")
-    res.render("login.ejs")
+    res.sendFile(__dirname + "/public/pages/login.html")
 })
 
 app.get("/register", (req, res) => {
-    // res.sendFile(__dirname + "/public/pages/register.html")
-    res.render("register.ejs")
-})
-
-app.get("/user", (req, res) => {
-    res.render("user.ejs")
+    res.sendFile(__dirname + "/public/pages/register.html")
 })
 
 app.post("/register", (req, res) => {
@@ -36,8 +29,7 @@ app.post("/register", (req, res) => {
                  password : req.body["password"]}
     users.push(obj)
     console.log(users)
-    res.redirect("/register")
-    // res.render("/register")
+    res.redirect("/")
 })
 
 app.post("/login", (req, res) => {
@@ -51,21 +43,13 @@ app.post("/login", (req, res) => {
     console.log(authenticated)
     if(authenticated){
         console.log("WELCOME")
-        res.redirect('user.ejs')
-        // res.render("login.ejs",
-        // {
-        //     authenticated: true
-        // })
-    } else {
-        console.log("NO WELCOME")
-        res.render("login.ejs",
-        {
-            authenticated: false
-        })
     }
+    else{
+        console.log("NO WELCOME")
+    }
+    res.redirect("/")
 })
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`)
 })
-
