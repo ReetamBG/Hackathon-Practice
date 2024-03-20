@@ -53,10 +53,10 @@ app.post("/login", (req, res) => {
     console.log(authenticated)
     if(authenticated){
         console.log("WELCOME")
-        res.render("login.ejs", {
-            authenticated : authenticated
-        })
         currently_logged = {email : req.body["email"]}
+        res.render("user.ejs", {
+            email : currently_logged["email"]
+        })
     }
     else{
         res.render("login.ejs", {

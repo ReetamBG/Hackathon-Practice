@@ -23,11 +23,7 @@
             />
         </label>
         <div class="warning">
-            <% if (locals.authenticated === true) { %>
-                <span>Login successfull</span>
-                <br>
-                <a href="/dash">Go to your Dashboard</a>
-            <% } else if (locals.authenticated === false) { %>
+            <% if (locals.authenticated === false) { %>
                 <span>Incorrect password entered </span>        
             <% } %>
         </div>
