@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/login.css" />
+  </head>
+  <body>
+    <form class="login-form" action="/login" method="POST">
+        <h1>Login</h1>
+        <label>
+            <!-- <span>Email Id</span> -->
+            <input id="email" placeholder="Email Id" type="email" name="email" />
+        </label>
+        <label>
+            <!-- <span>Password</span> -->
+            <input
+            id="password"
+            placeholder="Password"
+            type="password"
+            name="password"
+            />
+        </label>
+        <div class="warning">
+            <% if (locals.authenticated === true) { %>
+                <span>Login successfull</span>
+            <% } else if (locals.authenticated === false) { %>
+                <span>Incorrect password entered </span>        
+            <% } %>
+        </div>
+        <p>Not registered? <a href="/register">Create Account </a></p>
+        <button type="submit">Sign In</button>
+    </form>
+  </body>
+</html>

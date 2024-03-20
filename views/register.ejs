@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/register.css" />
+</head>
+
+<body>
+    <form class="register-form" action="/register" method="POST">
+        <% if (locals.registered) { %>
+            <h1>Congratulations! You have been successfully registered.</h1>
+            <a class="go-back-home" href="/">Go back to Home Page</a>
+        <% } else { %>
+            <h1>Register</h1>
+            <label for="email">
+                <span>Email Id</span>
+                <input id="email" type="email" name="email" placeholder="example@gmail.com" />
+            </label>
+            <label for="username">
+                <span>Username</span>
+                <input id="username" type="text" name="username" placeholder="Username" />
+            </label>
+            <label for="password">
+                <span>Password</span>
+                <input id="password" type="password" name="password" placeholder="Password" />
+            </label>
+            <label>
+                <input id="terms" type="checkbox" required value="checked" name="terms" />
+                <span>I accept the <a href="">terms & conditions</a></span>
+            </label>
+            <button type="submit">Create account</button>
+        <% } %>
+    </form>
+</body>
+
+</html>
