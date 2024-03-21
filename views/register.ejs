@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles/register.css" />
-</head>
-
-<body>
+    <%- include("partials/header.ejs") %>
     <form class="register-form" action="/register" method="POST">
         <% if (locals.registered) { %>
             <h1>Congratulations! You have been successfully registered.</h1>
@@ -34,6 +24,4 @@
             <button type="submit">Create account</button>
         <% } %>
     </form>
-</body>
-
-</html>
+    <%- include("partials/footer.ejs") %>
