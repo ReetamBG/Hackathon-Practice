@@ -2,20 +2,31 @@ body {
     font-family: sans-serif;
     color: white;
     background-color: #FFE6E6;
+    height: 100vh;
+
+    background: linear-gradient(to bottom, #0f1c21 0%, #26363e 45%, #4f5863 76%, #c6867f 100%);
+    color: white;
+
+    /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    color: black; */
 }
 
 .register-form {
-    width: 800px;
-    height: 600px;
+    width: 760px;
+    height: 570px;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    background: rgb(173,136,198);
-    background: linear-gradient(135deg, rgba(173,136,198,1) 7%, rgba(225,175,209,1) 23%, rgba(221,172,208,1) 58%, rgba(255,230,230,1) 100%); 
 
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .go-back-home {
@@ -42,6 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    text-indent: 6px;
 }
 
 .register-form > label:last-of-type {
@@ -54,28 +66,29 @@ body {
 }
 
 .register-form > label:last-of-type > input {
-    width: 20px;
+    width: 18px;
 }
 
 .register-form input {
-    font-size: 13px;
-    height: 26px;
-    width: 250px;
+    font-size: 17px;
+    height: 35px;
+    width: 300px;
     border: 2px solid grey;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
+    text-indent: 8px;
 }
 
 .register-form button {
     color: white;
     margin-top: 30px;
-    width: 250px;
-    height: 26px;
+    width: 300px;
+    height: 35px;
     font-size: 18px;
     background-color: #7469B6;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .register-form button:hover {

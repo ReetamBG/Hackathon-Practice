@@ -1,6 +1,12 @@
 body {
     background-color: rgba(225,175,209,1);
     font-family: sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0f1c21 0%, #26363e 45%, #4f5863 76%, #c6867f 100%);
+    color: white;
+
+    /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    color: black; */
 }
 
 .login-form {
@@ -9,14 +15,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    bottom: 0px;
     margin: 40px auto;
+    padding-top: 30px;
     gap: 5px;
-    background: rgba( 255, 255, 255, 0.35 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 10.5px );
-    -webkit-backdrop-filter: blur( 10.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .login-form h1 {
@@ -26,6 +37,10 @@ body {
 
 .login-form p:last-of-type {
     font-size: 15px;
+}
+
+.login-form p:last-of-type > a {
+    color:darkturquoise;
 }
 
 .login-form label {
@@ -39,6 +54,8 @@ body {
     height: 26px;
     width: 250px;
     background-color: inherit;
+
+    color: white;
 }
 
 .warning {

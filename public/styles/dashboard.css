@@ -1,0 +1,88 @@
+.dashboard {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.user-info {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.user-info > div {
+    width: 70%;
+    height: 80%;
+    background-color: #7469B6;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 60px 40px;
+
+    background: rgba( 255, 255, 255, 0.35 );
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.user-info > div > h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.map {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.map > div {
+    width: 70%;
+    height: 80%;
+    margin: 30px auto;
+    border: 2px solid #7469B6;
+    border-radius: 20px;
+    padding: 60px 40px;
+}
+
+.buttons {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* padding: 40px; */
+}
+
+.buttons form {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.buttons button {
+    text-decoration: none;
+    text-align: center;
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    margin-top: 30px;
+    padding-top: 4px;
+    background-color: #7469B6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 8px;
+}
+
+.buttons button:hover {
+    transform: scale(1.07);
+}
