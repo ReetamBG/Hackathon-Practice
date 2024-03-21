@@ -14,7 +14,7 @@ app.use(express.static("public"))
 const __dirname = dirname(fileURLToPath(import.meta.url)) 
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/pages/index.html")
+    res.render("home.ejs")
 })
 
 app.get("/login", (req, res) => {
