@@ -12,4 +12,4 @@ io.on("connection", socket => {
 
     socket.on('send', message => {
         socket.broadcast.emit("recieve", {message : message, name : user[socket.id]})
-})
+})})

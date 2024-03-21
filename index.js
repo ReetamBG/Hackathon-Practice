@@ -53,8 +53,16 @@ app.post("/login", (req, res) => {
     console.log(authenticated)
     if(authenticated){
         console.log("WELCOME")
-        currently_logged = {email : req.body["email"]}
-        res.render("user.ejs", {
+        let email = req.body["email"]
+        for(let i=0; i<users.length; i++){
+            if(users[i].email === email){
+                currently_logged = users[i]
+            }
+        }
+        console.log(currently_logged)
+        
+        res.render("dashboard.ejs", {
+            username : currently_logged["username"],
             email : currently_logged["email"]
         })
     }
